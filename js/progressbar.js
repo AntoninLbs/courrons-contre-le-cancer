@@ -9,7 +9,7 @@
   
     // ---- CONFIGURATION ----
     const goal = 420;     // Objectif total (€)
-    const current = 50;    // Montant actuel (€)
+    const current = 0;    // Montant actuel (€)
     const progress = (current / goal) * 100; // Pourcentage exact
   
     function animateProgress() {

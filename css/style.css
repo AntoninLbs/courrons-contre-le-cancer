@@ -325,5 +325,32 @@
     .progress-label {
       font-size: 0.9rem;
     }
+      /* --- Bouton bandeau "Je fais un don" --- */
+  .top-banner {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .banner-btn {
+    display: inline-block;
+    white-space: nowrap; /* empêche le retour à la ligne */
+    margin-left: 8px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* --- Réduction des marges entre sections --- */
+  section {
+    padding: 50px 5%;
+  }
+
+  .objectif {
+    padding-bottom: 60px; /* réduit l’espace sous la barre */
+  }
+
+  .evenement {
+    padding-top: 40px; /* rapproche le bloc suivant */
+  }
   }
   
