@@ -297,10 +297,17 @@
   
     .hero {
       background: var(--fond);
+      padding-top: 40px; /* ajoute de l'espace sous le bandeau sticky */
+
     }
   }
   
   @media (max-width: 768px) {
+    /* --- Aération entre le bandeau et le bloc Hero --- */
+.hero {
+    padding-top: 40px; /* ajoute de l'espace sous le bandeau sticky */
+  }
+
     h1 {
       font-size: 2.2rem;
     }
