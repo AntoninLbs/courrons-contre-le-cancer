@@ -1,0 +1,66 @@
+/* ===============================
+   TYPOGRAPHIE DU SITE
+   =============================== */
+
+/* Importation via Google Fonts (Anton seulement) */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* 
+   ⚠️ Pour les polices Berthold Block et Jipatha :
+   Place tes fichiers .woff2 / .woff / .ttf dans :
+   /assets/fonts/
+   et décommente les lignes suivantes si tu veux les utiliser localement.
+*/
+
+@font-face {
+  font-family: 'Berthold Block';
+  src: url('../assets/fonts/BertholdBlock-Regular.woff2') format('woff2'),
+       url('../assets/fonts/BertholdBlock-Regular.woff') format('woff'),
+       url('../assets/fonts/BertholdBlock-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jipatha';
+  src: url('../assets/fonts/Jipatha-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Jipatha-Regular.woff') format('woff'),
+       url('../assets/fonts/Jipatha-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===============================
+   APPLICATION GLOBALE
+   =============================== */
+
+body {
+  font-family: 'Jipatha', sans-serif;
+  font-size: 1rem;
+  color: var(--texte);
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: 'Berthold Block', sans-serif;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Jipatha', sans-serif;
+  line-height: 1.6;
+}

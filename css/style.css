@@ -1,0 +1,329 @@
+/* ===============================
+   VARIABLES & RESET
+   =============================== */
+
+   :root {
+    --orange: #ec6627;
+    --fond: #fff3f3;
+    --texte: #014470;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Jipatha', sans-serif;
+    color: var(--texte);
+    background-color: var(--fond);
+    line-height: 1.6;
+  }
+  
+  /* ===============================
+     TITRES & TEXTES
+     =============================== */
+  
+  h1, h2 {
+    color: var(--texte);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  h1 span {
+    color: var(--orange);
+  }
+  
+  h2 {
+    font-family: 'Berthold Block', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+/* ===============================
+   BANDEAU D'APPEL AUX DONS
+   =============================== */
+
+   .top-banner {
+    background: var(--orange);
+    color: var(--white);
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .top-banner p {
+    margin: 0;
+  }
+  
+  .banner-btn {
+    background: var(--white);
+    color: var(--orange);
+    margin-left: 10px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .banner-btn:hover {
+    background: #ffe8e0;
+  }
+  
+
+  /* ===============================
+     HERO
+     =============================== */
+  
+  .hero {
+    background: linear-gradient(to right, var(--fond) 50%, var(--orange) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .hero-text p {
+    margin: 20px 0;
+  }
+  
+  .btn-don {
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-don:hover {
+    background: #e05418;
+  }
+  
+  .hero-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-img img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .qr {
+    margin-top: 20px;
+    width: 150px;
+  }
+  
+  /* ===============================
+     SECTION OBJECTIF
+     =============================== */
+  
+  .objectif {
+    padding: 100px 10%;
+    background: var(--fond);
+    text-align: center;
+  }
+  
+  .progress-container {
+    position: relative;
+    width: 100%;
+    background: #e5e5e5;
+    border-radius: 30px;
+    height: 30px;
+    margin-top: 40px;
+  }
+  
+  .progress-bar {
+    background: var(--orange);
+    height: 100%;
+    width: 0%;
+    border-radius: 30px;
+    transition: width 1s ease-in-out;
+  }
+  
+  .progress-label {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: var(--texte);
+    font-size: 1rem;
+    transition: all 0.4s ease;
+  }
+  
+  /* ===============================
+     ÉVÉNEMENT
+     =============================== */
+  
+  .evenement {
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .logo-marathon {
+    margin-top: 30px;
+    max-width: 180px;
+  }
+  
+  /* ===============================
+     POURQUOI DONNER
+     =============================== */
+  
+  .pourquoi {
+    background: var(--white);
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .pourquoi article {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .logo-ligue {
+    margin-top: 30px;
+    width: 160px;
+  }
+  
+  /* ===============================
+     CTA FINAL
+     =============================== */
+  
+  .cta {
+    background: var(--orange);
+    color: var(--white);
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    color: var(--white);
+    font-family: 'Berthold Block', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  .btn-don-large {
+    background: var(--white);
+    color: var(--orange);
+    padding: 16px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-don-large:hover {
+    background: #ffe9e0;
+  }
+  
+  .qr-final {
+    display: block;
+    margin: 40px auto 0;
+    width: 180px;
+  }
+  
+  /* ===============================
+     FOOTER
+     =============================== */
+  
+  footer {
+    text-align: center;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+    background: var(--fond);
+  }
+  
+  /* ===============================
+     RESPONSIVE
+     =============================== */
+  
+  @media (max-width: 1200px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      text-align: center;
+    }
+  
+    .hero {
+      background: var(--fond);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    section {
+      padding: 60px 5%;
+    }
+  
+    .btn-don, .btn-don-large {
+      font-size: 0.9rem;
+      padding: 12px 20px;
+    }
+  
+    .qr, .qr-final {
+      width: 120px;
+    }
+  
+    .progress-label {
+      font-size: 0.9rem;
+    }
+  }
+  

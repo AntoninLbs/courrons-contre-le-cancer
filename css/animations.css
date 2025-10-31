@@ -1,0 +1,73 @@
+/* ===============================
+   ANIMATIONS GLOBALES
+   =============================== */
+
+/* Apparition progressive au scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Transitions générales */
+  a, button {
+    transition: all 0.3s ease;
+  }
+  
+  img {
+    transition: transform 0.4s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ===============================
+     ANIMATION BARRE DE DONS
+     =============================== */
+  
+  /* Brillance subtile sur la barre remplie */
+  .progress-bar {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+    animation: shimmer 3s infinite;
+  }
+  
+  /* Animation de la lumière glissante */
+  @keyframes shimmer {
+    0% {
+      left: -60%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+  
+  /* ===============================
+     FADE-IN AU SCROLL (visibilité)
+     =============================== */
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
