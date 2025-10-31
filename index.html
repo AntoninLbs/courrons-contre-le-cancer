@@ -1,0 +1,46 @@
+<?php
+require 'function.php'; 
+$station_id = isset($_GET['station_id']) ? (int)$_GET['station_id'] : 1413;
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Moyenne des Données de Vent</h2>
+
+    <div id="blurred-content">
+    <div class="owm-widget-container">
+    <div class="owm-widget"
+    data-id="MW<?= $station_id ?>"
+         data-show-2h="yes">
+    </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let script = document.createElement("script");
+            script.src = "https://www.openwindmap.org/js/widget-v1.js";
+            script.async = true;
+            script.onload = function() {
+                console.log("Widget OpenWindMap chargé.");
+            };
+            script.onerror = function() {
+                console.error("Erreur lors du chargement du widget OpenWindMap.");
+            };
+            document.body.appendChild(script);
+        });
+    </script>
+<style>
+</style>
+</body>
+</html>
