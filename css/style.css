@@ -57,18 +57,17 @@
     margin-bottom: 15px;
   }
   
-/* ===============================
-   BANDEAU D'APPEL AUX DONS
-   =============================== */
-
-   .top-banner {
+  /* ===============================
+     BANDEAU D'APPEL AUX DONS
+     =============================== */
+  
+  .top-banner {
     background: var(--orange);
     color: var(--white);
     text-align: center;
     padding: 12px 10px;
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 0.3px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -95,7 +94,6 @@
     background: #ffe8e0;
   }
   
-
   /* ===============================
      HERO
      =============================== */
@@ -107,6 +105,7 @@
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+    padding-top: 80px; /* espace sous le bandeau */
   }
   
   .hero-content {
@@ -126,7 +125,7 @@
   .hero-text p {
     margin: 20px 0;
   }
-  
+
   .btn-don {
     background: var(--orange);
     color: var(--white);
@@ -158,53 +157,6 @@
     margin-top: 20px;
     width: 150px;
   }
-
-  /* ===============================
-   COMPTE À REBOURS
-   =============================== */
-
-.countdown {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--texte);
-}
-
-.countdown span {
-  color: var(--orange);
-  font-size: 1.3rem;
-}
-
-/* ===============================
-   ANIMATION DU COMPTEUR
-   =============================== */
-
-   .countdown {
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: fadeSlideIn 1s ease forwards;
-    animation-delay: 0.3s;
-  }
-  
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Animation douce du changement du nombre */
-  #days {
-    display: inline-block;
-    transition: all 0.4s ease;
-  }
-  
-  
   
   /* ===============================
      SECTION OBJECTIF
@@ -246,6 +198,53 @@
   }
   
   /* ===============================
+     IMPACT DES DONS
+     =============================== */
+  
+  .impact {
+    background: var(--white);
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .impact h2 {
+    margin-bottom: 50px;
+  }
+  
+  .impact-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .impact-item {
+    background: var(--fond);
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .impact-item:hover {
+    background: var(--orange);
+    color: var(--white);
+    transform: translateY(-5px);
+  }
+  
+  .impact-item .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .impact-btn {
+    margin-top: 40px;
+  }
+  
+  /* ===============================
      ÉVÉNEMENT
      =============================== */
   
@@ -277,6 +276,47 @@
   .logo-ligue {
     margin-top: 30px;
     width: 160px;
+  }
+  
+  /* ===============================
+     PARTAGE
+     =============================== */
+  
+  .partage {
+    background: var(--fond);
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .partage h2 {
+    margin-bottom: 40px;
+  }
+  
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .share {
+    padding: 12px 22px;
+    border-radius: 6px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .share.facebook { background: #1877f2; }
+  .share.whatsapp { background: #25d366; }
+  .share.linkedin { background: #0077b5; }
+  .share.email { background: #555; }
+  
+  .share:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
   }
   
   /* ===============================
@@ -316,20 +356,126 @@
     margin: 40px auto 0;
     width: 180px;
   }
-
+  
   /* ===============================
-   SCROLL PROGRESS BAR
+     BOUTON FLOTTANT
+     =============================== */
+  
+  .floating-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.6rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 1500;
+  }
+  
+  .floating-btn:hover {
+    background: #e05418;
+    transform: scale(1.1);
+  }
+
+/* ===============================
+   ANIMATION + STYLE DU COMPTEUR
    =============================== */
 
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: var(--orange);
-  z-index: 2000;
-  transition: width 0.1s linear;
+   .countdown {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 1s ease forwards;
+    animation-delay: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-family: 'Berthold Block', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--texte); /* texte en bleu */
+  }
+  
+  .countdown span {
+    color: var(--orange); /* nombre en orange */
+    font-size: 1.3rem;
+  }
+  
+  /* Animation d’apparition */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation douce du changement du nombre */
+  #days {
+    display: inline-block;
+    transition: all 0.4s ease;
+  }
+  
+  /* Espacement du bouton sous le compteur */
+  .hero-text .btn-don {
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+  
+  
+  /* Animation douce du changement du nombre */
+  #days {
+    display: inline-block;
+    transition: all 0.4s ease;
+  }
+  
+    /* Ajustement du bouton "Faire un don maintenant" dans la section Impact */
+.impact .btn-don {
+  display: inline-block;
+  margin-top: 60px; /* espace plus grand au-dessus du bouton */
+  margin-bottom: 30px; /* espace en dessous */
+  padding: 16px 32px;
+  font-size: 1rem;
+}
+
+
+  /* ===============================
+   ANIMATION DU BOUTON FLOTTANT ❤️
+   =============================== */
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation douce et continue */
+.floating-btn {
+  animation: heartbeat 3s ease-in-out infinite;
 }
 
   
@@ -360,17 +506,10 @@
   
     .hero {
       background: var(--fond);
-      padding-top: 40px; /* ajoute de l'espace sous le bandeau sticky */
-
     }
   }
   
   @media (max-width: 768px) {
-    /* --- Aération entre le bandeau et le bloc Hero --- */
-.hero {
-    padding-top: 40px; /* ajoute de l'espace sous le bandeau sticky */
-  }
-
     h1 {
       font-size: 2.2rem;
     }
@@ -395,32 +534,23 @@
     .progress-label {
       font-size: 0.9rem;
     }
-      /* --- Bouton bandeau "Je fais un don" --- */
-  .top-banner {
-    padding: 10px 8px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-
-  .banner-btn {
-    display: inline-block;
-    white-space: nowrap; /* empêche le retour à la ligne */
-    margin-left: 8px;
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-
-  /* --- Réduction des marges entre sections --- */
-  section {
-    padding: 50px 5%;
-  }
-
-  .objectif {
-    padding-bottom: 60px; /* réduit l’espace sous la barre */
-  }
-
-  .evenement {
-    padding-top: 40px; /* rapproche le bloc suivant */
-  }
-  }
   
+    .impact-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .floating-btn {
+      width: 55px;
+      height: 55px;
+      font-size: 1.4rem;
+      bottom: 20px;
+      right: 20px;
+    }
+    .impact .btn-don {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 90%;
+    }
+  }
+

@@ -3,12 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="assets/icone.png">
-  <link rel="apple-touch-icon" href="assets/icone.png">
-  <link rel="icon" href="assets/icone.png" sizes="any" type="image/png">
-<link rel="shortcut icon" href="assets/icone.png" type="image/x-icon">
-<link rel="apple-touch-icon" href="assets/icone.png">
-
 
   <title>Courir contre le cancer – Marathon de Paris 2026</title>
   <meta name="description" content="Participez à la collecte de dons d’Antonin pour la Ligue contre le Cancer lors du Marathon de Paris 2026. Ensemble, courons pour la vie." />
@@ -28,16 +22,16 @@
 </head>
 
 <body>
-<!-- BANDEAU D’APPEL AUX DONS -->
-<div class="top-banner">
+  <!-- BANDEAU D’APPEL AUX DONS -->
+  <div class="top-banner">
     <p>
-      Ensemble, faisons reculer le cancer 
+      Ensemble, faisons reculer le cancer 💪
       <a href="#don" class="banner-btn">Je fais un don</a>
     </p>
   </div>
-  <!-- BARRE DE PROGRESSION DE SCROLL -->
-<div class="scroll-progress" id="scrollProgress"></div>
 
+  <!-- BARRE DE SCROLL -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- HERO -->
   <header class="hero" id="accueil">
@@ -72,12 +66,31 @@
       </div>
     </section>
 
+    <!-- IMPACT DES DONS -->
+    <section class="impact" id="impact">
+      <h2>L’impact de votre don</h2>
+      <div class="impact-cards">
+        <div class="impact-item">
+          <span class="icon">🎗️</span>
+          <p><strong>10 €</strong> = un appel de soutien psychologique pour une personne malade</p>
+        </div>
+        <div class="impact-item">
+          <span class="icon">🧪</span>
+          <p><strong>30 €</strong> = 1h de recherche financée</p>
+        </div>
+        <div class="impact-item">
+          <span class="icon">🏃</span>
+          <p><strong>50 €</strong> = 1 don symbolique pour chaque km parcouru</p>
+        </div>
+      </div>
+      <a href="#don" class="btn-don impact-btn">Faire un don maintenant</a>
+    </section>
+
     <!-- ÉVÉNEMENT -->
     <section class="evenement" id="evenement">
       <h2>Le Marathon de Paris</h2>
       <p>42,195 km – 292 m de dénivelé positif – 12 avril 2026</p>
       <p>Je cours en soutien à celles et ceux qui ne le peuvent plus. Ensemble, faisons de chaque pas un acte solidaire.</p>
-      <!-- Ajouter image : logo Marathon de Paris -->
       <img src="assets/logo-marathon.png" alt="Logo du Marathon de Paris" class="logo-marathon fade-in">
     </section>
 
@@ -86,9 +99,20 @@
       <h2>Pourquoi donner ?</h2>
       <article>
         <p>Chaque don, petit ou grand, fait la différence. Ensemble, nous soutenons la recherche, l’accompagnement et la prévention.</p>
-        <!-- Ajouter image : logo Ligue contre le cancer -->
         <img src="assets/logo-ligue.png" alt="Logo de la Ligue contre le Cancer" class="logo-ligue fade-in">
       </article>
+      <a href="#don" class="btn-don">Je participe</a>
+    </section>
+
+    <!-- PARTAGE -->
+    <section class="partage" id="partage">
+      <h2> Partagez ma page et aidez-moi à atteindre 420 € !</h2>
+      <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://courrons-contre-le-cancer.vercel.app/" target="_blank" class="share facebook">Facebook</a>
+        <a href="https://wa.me/?text=Je soutiens Antonin dans sa course : https://courrons-contre-le-cancer.vercel.app/" target="_blank" class="share whatsapp">WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://courrons-contre-le-cancer.vercel.app/" target="_blank" class="share linkedin">LinkedIn</a>
+        <a href="mailto:?subject=Je soutiens Antonin&body=Je t’invite à découvrir sa collecte : https://courrons-contre-le-cancer.vercel.app/" class="share email">Email</a>
+      </div>
     </section>
 
     <!-- CTA FINAL -->
@@ -101,6 +125,9 @@
     </section>
   </main>
 
+  <!-- BOUTON FLOTTANT -->
+  <a href="#don" class="floating-btn" title="Faire un don">❤️</a>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Antonin – Courir contre le cancer | Projet solidaire pour le Marathon de Paris</p>
@@ -110,5 +137,6 @@
   <script src="js/scroll.js"></script>
   <script src="js/progressbar.js"></script>
   <script src="js/countdown.js"></script>
+  <script src="js/floating.js"></script>
 </body>
 </html>
