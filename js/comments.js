@@ -28,34 +28,32 @@
   
     // Affichage des commentaires (3 par 3)
     function renderComments() {
-      commentList.innerHTML = "";
-  
-      // afficher seulement le nombre visible
-      comments.slice(0, visibleCount).forEach((c, index) => {
-        const div = document.createElement("div");
-        div.classList.add("comment");
-        if (isAdmin) div.classList.add("admin-visible");
-  
-        div.innerHTML = `
-          <strong>${escapeHtml(c.username)}</strong>
-          <p>${escapeHtml(c.message)}</p>
-          <small>${new Date(c.date).toLocaleDateString("fr-FR")}</small>
-          <button class="delete-btn" data-index="${index}" title="Supprimer">🗑️</button>
-        `;
-  
-        commentList.appendChild(div);
-      });
-  
-      // Mise à jour du compteur
-      soutiensCount.textContent = comments.length;
-  
-      // Gérer l'affichage du bouton "Voir plus"
-      if (comments.length > visibleCount) {
-        loadMoreBtn.classList.remove("hidden");
-      } else {
-        loadMoreBtn.classList.add("hidden");
+        commentList.innerHTML = "";
+      
+        comments.slice(0, visibleCount).forEach((c, index) => {
+          const div = document.createElement("div");
+          div.classList.add("comment");
+          if (isAdmin) div.classList.add("admin-visible");
+      
+          div.innerHTML = `
+            <strong>${escapeHtml(c.username)}</strong>
+            <p>${escapeHtml(c.message)}</p>
+            <small>${new Date(c.date).toLocaleDateString("fr-FR")}</small>
+            <button class="delete-btn" data-index="${index}" title="Supprimer">🗑️</button>
+          `;
+      
+          commentList.appendChild(div);
+        });
+      
+        soutiensCount.textContent = comments.length;
+      
+        if (comments.length > visibleCount) {
+          loadMoreBtn.classList.remove("hidden");
+        } else {
+          loadMoreBtn.classList.add("hidden");
+        }
       }
-    }
+      
   
     // Échapper les caractères HTML
     function escapeHtml(str) {
@@ -94,17 +92,27 @@
     });
   
     // Suppression (admin)
-    commentList.addEventListener("click", (e) => {
-      if (e.target.classList.contains("delete-btn")) {
-        if (!isAdmin) return alert("Accès refusé.");
-        const index = parseInt(e.target.dataset.index);
-        if (confirm("Supprimer ce message ?")) {
-          comments.splice(index, 1);
-          saveComments();
-          renderComments();
-        }
-      }
-    });
+// Suppression (admin)
+commentList.addEventListener("click", (e) => {
+    // On s'assure que même si on clique sur l'emoji 🗑️, on remonte bien jusqu'au bouton
+    const btn = e.target.closest(".delete-btn");
+    if (!btn) return;
+  
+    if (!isAdmin) {
+      alert("Accès refusé.");
+      return;
+    }
+  
+    const index = parseInt(btn.getAttribute("data-index"), 10);
+    if (isNaN(index)) return;
+  
+    if (confirm("Supprimer ce message ?")) {
+      comments.splice(index, 1);
+      saveComments();
+      renderComments();
+    }
+  });
+  
   
     // Lien secret pour activer le mode admin
     adminTrigger.addEventListener("click", (e) => {
