@@ -470,10 +470,15 @@
     /* Ajustement du bouton "Faire un don maintenant" dans la section Impact */
 .impact .btn-don {
   display: inline-block;
-  margin-top: 60px; /* espace plus grand au-dessus du bouton */
-  margin-bottom: 30px; /* espace en dessous */
-  padding: 16px 32px;
-  font-size: 1rem;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  padding: 18px 38px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  width: auto;
+  max-width: 320px;
 }
 
 
@@ -590,5 +595,27 @@
     .impact-icon {
       width: 24px;
     }
+    .impact .btn-don {
+      display: block;
+      width: 80%;
+      margin: 40px auto 1px;
+      font-size: 0.95rem;
+      padding: 14px 0;
+    }
+
+          /* --- Bouton bandeau "Je fais un don" --- */
+  .top-banner {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .banner-btn {
+    display: inline-block;
+    white-space: nowrap; /* empêche le retour à la ligne */
+    margin-left: 8px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
   }
 
