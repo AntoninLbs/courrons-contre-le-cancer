@@ -22,5 +22,17 @@
     fadeElements.forEach((el) => {
       appearOnScroll.observe(el);
     });
+    
+    /* ===============================
+   SCROLL PROGRESS BAR
+   =============================== */
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / scrollHeight) * 100;
+  document.getElementById("scrollProgress").style.width = `${scrollPercent}%`;
+});
+
   });
   

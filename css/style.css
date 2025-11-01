@@ -158,6 +158,53 @@
     margin-top: 20px;
     width: 150px;
   }
+
+  /* ===============================
+   COMPTE À REBOURS
+   =============================== */
+
+.countdown {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--texte);
+}
+
+.countdown span {
+  color: var(--orange);
+  font-size: 1.3rem;
+}
+
+/* ===============================
+   ANIMATION DU COMPTEUR
+   =============================== */
+
+   .countdown {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideIn 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation douce du changement du nombre */
+  #days {
+    display: inline-block;
+    transition: all 0.4s ease;
+  }
+  
+  
   
   /* ===============================
      SECTION OBJECTIF
@@ -269,6 +316,22 @@
     margin: 40px auto 0;
     width: 180px;
   }
+
+  /* ===============================
+   SCROLL PROGRESS BAR
+   =============================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--orange);
+  z-index: 2000;
+  transition: width 0.1s linear;
+}
+
   
   /* ===============================
      FOOTER
