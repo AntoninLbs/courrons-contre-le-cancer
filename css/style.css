@@ -481,6 +481,198 @@
   max-width: 320px;
 }
 
+/* ===============================
+   SECTION TÉMOIGNAGES & SOUTIENS
+   =============================== */
+
+   .temoignages {
+    background: var(--fond);
+    padding: 100px 10%;
+    text-align: center;
+  }
+  
+  .temoignages h2 {
+    margin-bottom: 10px;
+    color: var(--orange);
+  }
+  
+  .soutiens-count {
+    font-size: 1rem;
+    color: var(--texte);
+    margin-bottom: 30px;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+  
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--orange);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .comment-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .comment-form button {
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .comment-form button:hover {
+    background: #e05418;
+  }
+  
+  /* Liste des commentaires */
+  .comment-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+/* Bouton suppression admin */
+.comment .delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none; /* par défaut invisible */
+  transition: color 0.3s ease;
+}
+
+.comment.admin-visible .delete-btn {
+  display: block; /* visible seulement pour l’admin */
+}
+
+.comment .delete-btn:hover {
+  color: var(--orange);
+}
+  
+  .admin-login {
+    margin-top: 40px;
+  }
+  
+  .admin-login input {
+    padding: 8px 10px;
+    border: 2px solid var(--orange);
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  
+  .admin-login button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* ===============================
+   COMMENTAIRES EN VIGNETTES HORIZONTALES
+   =============================== */
+
+.comment-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto 30px;
+}
+
+.comment-list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.4s ease;
+}
+
+.comment {
+  background: var(--white);
+  border-left: 4px solid var(--orange);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+  width: 300px;
+  min-height: 120px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+  color: var(--orange);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment small {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Bouton "Voir plus" */
+.load-more {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.load-more:hover {
+  background: #e05418;
+}
+
+.load-more.hidden {
+  display: none;
+}
+
+/* ===============================
+   LIEN ADMIN SECRET
+   =============================== */
+  /* 
+   .admin-trigger-hidden {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+Pour debug temporaire, tu peux afficher le lien :  */
+  .admin-trigger-hidden { opacity: 0.2; background: rgba(255,0,0,0.1); }
+
 
   /* ===============================
    ANIMATION DU BOUTON FLOTTANT ❤️
@@ -617,5 +809,28 @@
     padding: 6px 10px;
     font-size: 0.85rem;
   }
+  .comment-form, .comment-list {
+    width: 90%;
   }
+
+  .temoignages {
+    padding: 80px 5%;
+  }
+
+  .comment-form button {
+    width: 100%;
+  }
+  .comment-list-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comment {
+    width: 90%;
+  }
+
+  .load-more {
+    width: 80%;
+  }
+}
 

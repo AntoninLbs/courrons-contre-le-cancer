@@ -110,6 +110,27 @@
       <a href="#don" class="btn-don">Je participe</a>
     </section>
 
+    <!-- SECTION TÉMOIGNAGES & SOUTIENS -->
+    <section class="temoignages" id="temoignages">
+      <h2>Ils m’encouragent 💬</h2>
+      <p class="soutiens-count">Déjà <span id="soutiensCount">0</span> personnes ont laissé un message de soutien.</p>
+
+      <form id="commentForm" class="comment-form">
+        <input type="text" id="username" placeholder="Votre prénom" required>
+        <textarea id="message" placeholder="Votre message d'encouragement" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <div id="commentWrapper" class="comment-wrapper">
+        <div id="commentList" class="comment-list-horizontal">
+          <!-- Commentaires insérés ici -->
+        </div>
+      </div>
+      
+      <button id="loadMoreBtn" class="load-more">Voir plus</button>
+    </section>
+
+
     <!-- PARTAGE -->
     <section class="partage" id="partage">
       <h2> Partagez ma page et aidez-moi à atteindre 420 € !</h2>
@@ -137,6 +158,8 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Antonin – Courir contre le cancer | Projet solidaire pour le Marathon de Paris</p>
+    <!-- LIEN SECRET ADMIN (invisible) -->
+    <a id="adminTrigger" href="#" aria-hidden="true" class="admin-trigger-hidden">admin</a>
   </footer>
 
   <!-- Scripts -->
@@ -144,5 +167,6 @@
   <script src="js/progressbar.js"></script>
   <script src="js/countdown.js"></script>
   <script src="js/floating.js"></script>
+  <script src="js/comments.js"></script>
 </body>
 </html>
