@@ -56,7 +56,7 @@
     font-size: 1.1rem;
     margin-bottom: 15px;
   }
-  
+
   /* ===============================
      BANDEAU D'APPEL AUX DONS
      =============================== */
@@ -385,6 +385,17 @@
     margin: 40px auto 0;
     width: 180px;
   }
+
+    /* ===============================
+     Bouton "Faire un don maintenant" dans la section Impact 
+     =============================== */
+
+
+.btn-don.impact-btn:hover {
+  background: #e05418;
+  transform: translateY(-2px);
+}
+  
   
   /* ===============================
      BOUTON FLOTTANT
@@ -472,8 +483,8 @@
   display: inline-block;
   margin-top: 60px;
   margin-bottom: 50px;
-  padding: 18px 38px;
-  font-size: 1.1rem;
+  padding: 14px 28px;
+  font-size: 1.0rem;
   font-weight: bold;
   border-radius: 8px;
   text-align: center;
@@ -596,10 +607,10 @@
     }
     .impact .btn-don {
       display: block;
-      width: 80%;
+      width: 70%;
       margin: 40px auto 1px;
-      font-size: 0.95rem;
-      padding: 14px 0;
+      font-size: 0.9rem;
+      padding: 12px 17px;
     }
 
           /* --- Bouton bandeau "Je fais un don" --- */
@@ -619,5 +630,6 @@
   .comment-form, .comment-list {
     width: 90%;
   }
+
 }
 
