@@ -620,6 +620,10 @@
     line-height: 1.4;
   }
 
+  .qr-final{
+  border-radius: 10px;
+}
+
   .banner-btn {
     display: inline-block;
     white-space: nowrap; /* empêche le retour à la ligne */
