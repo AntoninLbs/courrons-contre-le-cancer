@@ -381,9 +381,11 @@
   }
   
   .qr-final {
+    border-radius: 10px;
     display: block;
     margin: 40px auto 0;
     width: 180px;
+    border-radius: 10px;
   }
 
     /* ===============================
@@ -573,6 +575,7 @@
   
     .qr, .qr-final {
       width: 120px;
+      border-radius: 10px;
     }
   
     .progress-label {
@@ -620,9 +623,6 @@
     line-height: 1.4;
   }
 
-  .qr-final{
-  border-radius: 10px;
-}
 
   .banner-btn {
     display: inline-block;
